@@ -23,12 +23,7 @@ TARGET_TEGRA_VERSION := t124
 TARGET_TEGRA_MODEM := icera
 TARGET_TEGRA_TOUCH := raydium
 
-# ATV Support
-ifeq ($(ALTERNATE_BUILD),true)
-$(call inherit-product, device/nvidia/shieldtablet/device_atv.mk)
-else
 $(call inherit-product, device/nvidia/shieldtablet/device_tablet.mk)
-endif
 
 $(call inherit-product, device/nvidia/shield-common/shield.mk)
 
